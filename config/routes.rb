@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get 'performs/new'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html get 'spectacles/:index'
 
   root to: "spectacles#index"
-  resources :spectacles
+  resources :spectacles do
+    resources :performs, only: [:new, :create]
+  end
 
 
   # get 'spectacles', to: 'spectacles#index'

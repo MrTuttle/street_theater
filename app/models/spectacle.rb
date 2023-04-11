@@ -1,3 +1,3 @@
 class Spectacle < ApplicationRecord
-  has_many :reservations
+  has_many :performs, dependent: :destroy
 end

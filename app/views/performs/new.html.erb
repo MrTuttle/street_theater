@@ -1,0 +1,14 @@
+<h1>Performs#new</h1>
+<p>Find me in app/views/performs/new.html.erb</p>
+
+
+<div class="card p-4">
+  <%= simple_form_for [@spectacle, @perform] do |f| %>
+    <%= f.input :date, placeholder: 'date' %>
+    <%= f.input :cost, placeholder: 'cost' %>
+    <%= f.input :spectacle_id, placeholder: 'spectacle' %>
+
+
+    <%= f.submit 'Save', class: 'bt' %>
+  <% end %>
+</div>
