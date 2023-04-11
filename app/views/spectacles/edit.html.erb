@@ -1,0 +1,16 @@
+<h1>Edit</h1>
+<div class="card p-4">
+  <%= simple_form_for @spectacle do |f| %>
+    <%= f.input :title, placeholder: 'title' %>
+    <%= f.input :director, placeholder: 'director' %>
+    <%= f.input_field :description, placeholder: 'description' %>
+    <%= f.input :duration, placeholder: 'duration' %>
+    <%= f.input :distribution, placeholder: 'distribution' %>
+    <%= f.input :production, placeholder: 'production' %>
+    <%= f.input :coproduction, placeholder: 'coproduction' %>
+    <%= f.input :origin, placeholder: 'origin' %>
+    <%= f.input :public, placeholder: 'public' %>
+
+    <%= f.submit 'Save', class: 'bt' %>
+  <% end %>
+</div>
