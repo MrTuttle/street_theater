@@ -4,6 +4,15 @@
   <h3><%= @spectacle.title %></h3>
   <p><strong>Directeur </strong><%= @spectacle.director %></p>
   <p><%= @spectacle.description %></p>
+
+  <ul class="list-group">
+    <% @spectacle.performs.each do |perform| %>
+      <li class="list-group-item">
+       <strong>Date</strong> <%= perform.date %>
+        <strong>Cost</strong><%= perform.cost %>
+      </li>
+    <% end %>
+    </ul>
   <p><strong>Durée </strong><%= @spectacle.duration %></p>
   <p><strong>Distribution </strong><%= @spectacle.distribution %></p>
   <p><strong>Production </strong><%= @spectacle.production %></p>
