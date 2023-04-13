@@ -1,4 +1,5 @@
 class PerformsController < ApplicationController
+  before_action :set_spectacle, only: [:show, :edit, :update, :destroy]
 
   def index
     @performs = Perform.all
@@ -25,8 +26,18 @@ class PerformsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
+  def set_spectacle
+    @spectacle = Spectacle.find(params[:spectacle_id])
+    @perform.spectacle = @spectacle
+  end
+
+
+
   def perform_params
-    params.require(:perform).permit(:date, :cost)
+    params.require(:perform).permit(:date, :cost, :spectacle_id)
   end
 end
