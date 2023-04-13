@@ -6,10 +6,11 @@
   <div class="cards_container">
     <% @spectacles.each do | spectacle | %>
     <div class="card p-4 mt-2">
-      <h4><%= spectacle.title %></h4>
 
+      <h4><%= spectacle.title %></h4>
       <p><%= spectacle.origin %></p>
       <p><%= spectacle.public %></p>
+
       <div class="d-flex emulated-flex-gap">
         <%= link_to "Detail", spectacle, class:"btn btn-flat"%>
         <%= button_to "Delete", spectacle, class:"btn btn-flat", method: :delete %>

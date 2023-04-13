@@ -5,8 +5,8 @@
   </p>
 <% @performs.each do | perform | %>
   <div class="card p-4 mt-2 mb-2">
-    <h4><%= Spectacle.find(perform.spectacle_id).title %></h4>
-    <p><strong>Description </strong><%= Spectacle.find(perform.spectacle_id).description %></p>
+    <h2><%= perform.spectacle.title %></h2>
+    <p><%= perform.spectacle.description %></p>
 
     <p><strong>id </strong><%= perform.id %></p>
     <p><strong>date </strong><%= perform.date %></p>
