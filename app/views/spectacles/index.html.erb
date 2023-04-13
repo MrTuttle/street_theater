@@ -3,16 +3,18 @@
   <p><%= link_to "new spectacle", new_spectacle_path %> |
   <%= link_to "see performs", performs_path %>
   </p>
-  <% @spectacles.each do | spectacle | %>
-  <div class="card p-4 mt-2 mb-2">
-    <h4><%= spectacle.title %></h4>
+  <div class="cards_container">
+    <% @spectacles.each do | spectacle | %>
+    <div class="card p-4 mt-2">
+      <h4><%= spectacle.title %></h4>
 
-    <p><%= spectacle.origin %></p>
-    <p><%= spectacle.public %></p>
-    <%= link_to "Detail", spectacle %>
-    <%= button_to "Delete", spectacle, method: :delete %>
-    <%= link_to "Edit", edit_spectacle_path(spectacle) %>
-
-
-  </div>
+      <p><%= spectacle.origin %></p>
+      <p><%= spectacle.public %></p>
+      <div class="d-flex emulated-flex-gap">
+        <%= link_to "Detail", spectacle, class:"btn btn-flat"%>
+        <%= button_to "Delete", spectacle, class:"btn btn-flat", method: :delete %>
+        <%= link_to "Edit", edit_spectacle_path(spectacle), class:"btn btn-flat" %>
+      </div>
+    </div>
   <% end %>
+  </div>
