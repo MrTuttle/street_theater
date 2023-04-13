@@ -31,7 +31,29 @@ Spectacle.create!(
   origin: 'belgique',
   public: '10 ans et plus'
 )
-puts "add 2 spectacles : OK -> creating perform..."
+Spectacle.create!(
+  title:'Cabinet de curiosité',
+  director: 'jean Michel director',
+  description: 'Cabinet de Curiosité est une performance chorégraphique dans une boîte de verre reliée à trente casques diffusant l’univers sonore joué en direct. Elle donne à voir au plus près la dramaturgie microscopique d’un corps qui s’organise.',
+  duration: 0.2,
+  distribution: 'Jean Michel distrib',
+  production: 'Jean Michel prod',
+  coproduction: 'Jean Michel coprod',
+  origin: 'france',
+  public: 'Tout public'
+)
+Spectacle.create!(
+  title:'Aquaria',
+  director: 'jean Michel director',
+  description: 'Sous couvert d’un univers fêlé, décomplexé et populaire qui détourne les tubes et se rit des clichés, le public est invité à partager des histoires de femmes. Chanson après chanson, nos deux divas espiègles et sensuelles se racontent, se dévoilent et laissent apparaître leurs envies autant que leurs questionnements. Et si tous les chagrins s’effaçaient dans la complicité ? Quel équilibre trouver entre l’amour, le désir, la séduction et le besoin de liberté ? ARIA 3000 c’est avant tout un état d’esprit, celui du rire et du défi.',
+  duration: 0.2,
+  distribution: 'Jean Michel distrib',
+  production: 'Distribution : Hélène Pluyaut-Biwer & Fanny Chamboredon : Chanteuses et metteuses en scène / Clément Vallery : graphiste et technicien son',
+  coproduction: 'Coproductions : La Roue Voilée',
+  origin: 'france',
+  public: 'Tout public'
+)
+puts "add 4 spectacles : OK -> creating perform..."
 
 Perform.create!(
   date: '2021-04-11',
