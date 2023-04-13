@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root to: "spectacles#index"
   resources :spectacles do
-    resources :performs, only: [:new, :create]
+    resources :performs, only: [:new, :create, :index]
   end
 
 

@@ -1,10 +1,14 @@
 class PerformsController < ApplicationController
 
-  def new
+  def index
+    @performs = Perform.all
+  end
 
+  def new
     @spectacle = Spectacle.find(params[:spectacle_id])
     @perform = Perform.new
   end
+
   def create
     # build the perform with cost and dates and other params
     @perform = Perform.new(perform_params)
