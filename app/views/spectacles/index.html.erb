@@ -4,12 +4,7 @@
   <% @spectacles.each do | spectacle | %>
   <div class="card p-4 mt-2 mb-2">
     <h4><%= spectacle.title %></h4>
-    <p><strong>director </strong><%= spectacle.director %></p>
-    <p><%= spectacle.description %></p>
-    <p><%= spectacle.duration %></p>
-    <p><%= spectacle.distribution %></p>
-    <p><%= spectacle.production %></p>
-    <p><%= spectacle.coproduction %></p>
+
     <p><%= spectacle.origin %></p>
     <p><%= spectacle.public %></p>
     <%= link_to "Detail", spectacle %>

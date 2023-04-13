@@ -1,7 +1,7 @@
 class PerformsController < ApplicationController
 
   def new
-    raise
+
     @spectacle = Spectacle.find(params[:spectacle_id])
     @perform = Perform.new
   end
@@ -13,8 +13,12 @@ class PerformsController < ApplicationController
     # associate the perform with the spectacle
     @perform.spectacle = @spectacle
     # save the perform
-    @perform.save
-    redirect_to spectacle_path(@spectacle)
+
+    if @perform.save # true: redirect to spectacle show
+      redirect_to spectacle_path(@spectacle)
+    else # false: render the form again with the errors ( model perform validates interprétés par simple_form)
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
