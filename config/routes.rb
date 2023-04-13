@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :spectacles do
     resources :performs, only: [:new, :create]
   end
+  resources :performs, only: [:index, :show, :edit, :update, :destroy]
 
 
   # get 'spectacles', to: 'spectacles#index'
