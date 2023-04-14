@@ -43,6 +43,17 @@ Spectacle.create!(
   public: 'Tout public'
 )
 Spectacle.create!(
+  title:'J’ai un vieux dans mon sac, si tu veux je te le prête',
+  director: 'Marie-Do Fréval',
+  description: 'Dans la zone des 100 vieux, 4 maîtres de cérémonie débarquent pour chanter la vieillesse et raconter son dernier sursaut. C’est un rituel rock et jouissif où la vieillesse explose le cerveau et les bons comportements et où nous basculons au cœur de la folie. Tour à tour, ils brandissent à bout de bras le courant cocasse et vital du dernier épisode de nos vies.Sous couvert d’un univers fêlé, décomplexé et populaire qui détourne les tubes et se rit des clichés, le public est invité à partager des histoires de femmes. Chanson après chanson, nos deux divas espiègles et sensuelles se racontent, se dévoilent et laissent apparaître leurs envies autant que leurs questionnements. Et si tous les chagrins s’effaçaient dans la complicité ? Quel équilibre trouver entre l’amour, le désir, la séduction et le besoin de liberté ? ARIA 3000 c’est avant tout un état d’esprit, celui du rire et du défi.',
+  duration: 120,
+  distribution: 'De et avec : Marie-Do Fréval / Avec : Evandro Serodio (constructeur et chanteur-comédien), Théo Harfoush (composition musicale et chanteur-comédien), Léandre Simioni (régisseur son et chanteur- comédien) / Regard complice et direction d’acteurs : Rita Tchenko',
+  production: 'Distribution : Hélène Pluyaut-Biwer & Fanny Chamboredon : Chanteuses et metteuses en scène / Clément Vallery : graphiste et technicien son',
+  coproduction: 'CNAREP Moulin Fondu (Garges-lès-Gonesse); CNAREP Atelier 231(Sotteville-lès-Rouen); CNAREP Sur le Pont (La Rochelle); 2R2C La Coopérative De Rue et De Cirque (Paris).',
+  origin: 'Paris',
+  public: 'Tout public'
+)
+Spectacle.create!(
   title:'Aquaria',
   director: 'jean Michel director',
   description: 'Sous couvert d’un univers fêlé, décomplexé et populaire qui détourne les tubes et se rit des clichés, le public est invité à partager des histoires de femmes. Chanson après chanson, nos deux divas espiègles et sensuelles se racontent, se dévoilent et laissent apparaître leurs envies autant que leurs questionnements. Et si tous les chagrins s’effaçaient dans la complicité ? Quel équilibre trouver entre l’amour, le désir, la séduction et le besoin de liberté ? ARIA 3000 c’est avant tout un état d’esprit, celui du rire et du défi.',
