@@ -11,12 +11,11 @@
       <p><%= spectacle.public %></p>
 
 
-      <% spectacle.performs.each do | day | %>
-        <p><%= day.date.strftime("%A") %></p>
-
-        <h1><%= day.date.strftime("%d") %></h1>
-        <p><%= day.date.strftime("%^b") %></>
+      <p>
+        <% spectacle.performs.each do | day | %>
+         | <strong><%= day.date.strftime("%a %d") %></strong> <%= day.date.strftime("%^b") %>
       <% end %>
+      </p>
 
       <div class="d-flex emulated-flex-gap">
         <%= link_to "Detail", spectacle, class:"btn btn-flat"%>

@@ -5,14 +5,17 @@
   <p><strong>Directeur </strong><%= @spectacle.director %></p>
   <p><%= @spectacle.description %></p>
 
-  <ul class="list-group">
+  <div class="d-flex flex-row" style="border:1px blue solid;">
     <% @spectacle.performs.each do |perform| %>
-      <li class="list-group-item">
-       <strong>Date</strong> <%= perform.date %>
-        <strong>Cost</strong><%= perform.cost %>
-      </li>
+      <div class="d-flex align-items-center flex-column p-4" style="border: red solid 1px; width:25%;">
+        <p><%= perform.date.strftime("%A") %></p>
+        <h1><%= perform.date.strftime("%d") %></h1>
+        <p><%= perform.date.strftime("%^b") %></p>
+        <p><strong>Cost </strong><%= perform.cost %> €</p>
+      </div>
     <% end %>
-    </ul>
+  </div>
+
   <p><strong>Durée </strong><%= @spectacle.duration %></p>
   <p><strong>Distribution </strong><%= @spectacle.distribution %></p>
   <p><strong>Production </strong><%= @spectacle.production %></p>
