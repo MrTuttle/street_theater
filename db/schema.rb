@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_16_192112) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_210635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "cp"
+    t.string "town"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "performs", force: :cascade do |t|
     t.date "date"
@@ -20,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_192112) do
     t.bigint "spectacle_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "location_id"
+    t.index ["location_id"], name: "index_performs_on_location_id"
     t.index ["spectacle_id"], name: "index_performs_on_spectacle_id"
   end
 
@@ -38,5 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_192112) do
     t.string "company"
   end
 
+  add_foreign_key "performs", "locations"
   add_foreign_key "performs", "spectacles"
 end

@@ -8,6 +8,8 @@
 puts "Cleaning database..."
 Spectacle.destroy_all
 Perform.destroy_all
+Location.destroy_all
+
 puts "creating spectacle..."
 Spectacle.create!(
   title:'Le grand Ecart',
@@ -23,7 +25,7 @@ Spectacle.create!(
 )
 Spectacle.create!(
   title:'Labyrinthe',
-  company: 'Akalmie Celcius'
+  company: 'Akalmie Celcius',
   director: 'jean Michel test',
   description: '"C’est d’abord une ville et dans cette ville, un quartier, et dans ce quartier, un immeuble. Une fissure trace son sillon à l’intérieur de ce bâtiment. Le terrain est idéal pour raconter l’émiettement, la propagation de la maladie des murs jusqu’au grand fracas." Labyrinthe est une fable qui vient se raconter là où on veut bien l’écouter. Le son accompagne la marche et le récit, il raconte la pulsation des murs et des vies qui les habitent.',
   duration: 1.2,
@@ -59,7 +61,7 @@ Spectacle.create!(
 )
 Spectacle.create!(
   title:'Aquaria',
-  company: 'Aria 3000'
+  company: 'Aria 3000',
   director: 'jean Michel director',
   description: 'Sous couvert d’un univers fêlé, décomplexé et populaire qui détourne les tubes et se rit des clichés, le public est invité à partager des histoires de femmes. Chanson après chanson, nos deux divas espiègles et sensuelles se racontent, se dévoilent et laissent apparaître leurs envies autant que leurs questionnements. Et si tous les chagrins s’effaçaient dans la complicité ? Quel équilibre trouver entre l’amour, le désir, la séduction et le besoin de liberté ? ARIA 3000 c’est avant tout un état d’esprit, celui du rire et du défi.',
   duration: 0.2,
@@ -87,3 +89,7 @@ Perform.create!(
   spectacle_id: 2
 )
 puts "add 3 performs : OK"
+puts "add 3 locations"
+Location.create!(name: 'Carmel', address: '16 Rue de la Motte', cp: '71100', town: 'Chalon-sur-Saône')
+Location.create!(name: 'Abbatoir', address: '52 Quai Saint-Cosme', cp: '71100', town: 'Chalon-sur-Saône')
+Location.create!(name: 'Jardin Botanique', address: 'Parc Georges Nouelle, 7 avenue Mathias', cp: '71100', town: 'Chalon-sur-Saône')
