@@ -1,0 +1,14 @@
+ <%= simple_form_for @spectacle, wrapper: :vertical_form do |f| %>
+    <%= f.input :title, placeholder: 'title' %>
+    <%= f.input :company, placeholder: 'company' %>
+    <%= f.input :director, placeholder: 'director' %>
+    <%= f.input :description, placeholder: 'description', style: 'height:12rem;' %>
+    <%= f.input :duration, placeholder: 'duration' %>
+    <%= f.input :distribution, placeholder: 'distribution' %>
+    <%= f.input :production, placeholder: 'production' %>
+    <%= f.input :coproduction, placeholder: 'coproduction' %>
+    <%= f.input :origin, placeholder: 'origin' %>
+    <%= f.input :public, placeholder: 'public' %>
+
+    <%= f.submit 'Save', class: 'bt' %>
+  <% end %>

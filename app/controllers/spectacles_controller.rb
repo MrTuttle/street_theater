@@ -43,7 +43,7 @@ class SpectaclesController < ApplicationController
   end
 
   def spectacle_params
-    params.require(:spectacle).permit(:title, :description, :director, :duration, :distribution, :production, :coproduction, :origin, :public)
+    params.require(:spectacle).permit(:title, :company, :description, :director, :duration, :distribution, :production, :coproduction, :origin, :public)
   end
 
 end
