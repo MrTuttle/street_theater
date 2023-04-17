@@ -7,10 +7,16 @@
 
 
 <div class="card p-4">
+<ul>
+  <li>Spectacle : <strong><%= @spectacle.title %></strong> (@spectacle.title)</li>
+  <li>Company : <strong><%= @spectacle.company %></strong> (@spectacle.company)</li>
+  <li>ID : <strong><%= @spectacle.id %></strong> (@spectacle.id)</li>
+</ul>
+
   <%= simple_form_for [@spectacle, @perform] do |f| %>
     <%= f.input :date, placeholder: 'date' %>
     <%= f.input :cost, placeholder: 'cost' %>
-    <%= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
+    <%#= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
 
 
     <%= f.submit 'Save', class: 'bt' %>
