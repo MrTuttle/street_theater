@@ -32,7 +32,7 @@ class PerformsController < ApplicationController
   private
   def set_spectacle
     #@spectacle = Spectacle.find(params[:spectacle_id])
-    @perform.spectacle = @spectacle
+    #@perform.spectacle = @spectacle
   end
 
 
