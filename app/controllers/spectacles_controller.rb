@@ -4,7 +4,6 @@ class SpectaclesController < ApplicationController
 
   def index
     @spectacles = Spectacle.all
-    @spectacle = @spectacles.last
   end
 
   def new

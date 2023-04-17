@@ -1,7 +1,9 @@
 <h1>Performs#index</h1>
 <p>Find me in app/views/performs/index.html.erb</p>
 <p><%= link_to "new spectacle", new_spectacle_path %> |
-  <%= link_to "see spectacles", spectacles_path %>
+  <%= link_to "see spectacles", spectacles_path %> |
+  <%#= link_to "+ Add perform", new_spectacle_perform_path(@spectacle) %>
+
 </p>
 <div class="cards_container">
   <% @performs.each do | perform | %>

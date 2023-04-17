@@ -5,14 +5,23 @@
   </div>
 </div>
 
+<%# @locations.each do |location| %>
+<p>
+<%#= location.name %></p>
+<%# end %>
 
 <div class="card p-4">
+  <p>Set a perform to : <strong><%= @spectacle.title %></strong> (@spectacle.title)</p>
+  <p>spectacle.id : <strong><%= @spectacle.id %></strong> (@spectacle.id)</p>
+  <p>locations.ids : <strong><%= @locations.ids %></strong> (@locations.id)</p>
+
   <%= simple_form_for [@spectacle, @perform] do |f| %>
     <%= f.input :date, placeholder: 'date' %>
+    <%#= f.input :location_id, placeholder: "location id #{@locations.name}" %>
+    <%#= f.association :location, include_blank: false %>
+    <%#= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
+
     <%= f.input :cost, placeholder: 'cost' %>
-    <%= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
-
-
     <%= f.submit 'Save', class: 'bt' %>
   <% end %>
 </div>
