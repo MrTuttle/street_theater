@@ -1,10 +1,5 @@
 <h1>Location new</h1>
-
-  <%= simple_form_for @location do |f| %>
-    <%= f.input :name, placeholder: 'name' %>
-    <%= f.input :address, placeholder: 'address' %>
-    <%= f.input :longitude, placeholder: 'longitude' %>
-    <%= f.input :latitude, placeholder: 'latitude' %>
-
-    <%= f.submit 'Save', class: 'bt' %>
-  <% end %>
+<div class="card p-4">
+  <%= render "form" %>
+</div>
+<%= link_to "< Back", :back %>

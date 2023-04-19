@@ -1,5 +1,7 @@
 <h1>location show</h1>
-  <%= link_to "< back", :back %>
+  <%= link_to "see spectacles", spectacles_path %> |
+  <%= link_to "see locations", locations_path %> |
+  <%= link_to "new location", new_location_path %>
 
 <div class="cards_container">
     <div class="card p-4 mt-2 mb-2">
@@ -9,7 +11,6 @@
       <p class="mb-0"><strong>longitude : </strong><%= @location.longitude %></p>
       <p class="mb-0"><strong>latitude : </strong><%= @location.latitude %></p>
 
-        <%= link_to "list", locations_path %>
         <%= link_to "Edit", edit_location_path(@location) %>
         <%= button_to "Delete", @location, method: :delete %>
     </div>
