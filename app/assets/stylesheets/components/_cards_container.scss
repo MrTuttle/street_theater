@@ -7,6 +7,13 @@
   align-items: stretch;
 
 }
+.no_link a {
+  text-decoration: none;
+  color: black;
+}
+.no_link a:hover {
+  color: $primary;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
