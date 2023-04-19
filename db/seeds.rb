@@ -91,6 +91,9 @@ Perform.create!(
 puts "add 3 performs : OK"
 
 Location.create!(name: 'Carmel', address: '16 Rue de la Motte, 71100 Chalon-sur-Saône', latitude: '46.783966656241425', longitude: '4.859141425954974')
-Location.create!(name: "L'Abattoir" , address: '52 Quai Saint-Cosme, 71100 Chalon-sur-Saône', latitude: '46.77535337857228', longitude: "4.845667597118522")
+Location.create!(name: "L'Abattoir", address: '52 Quai Saint-Cosme, 71100 Chalon-sur-Saône', latitude: '46.77535337857228', longitude: "4.845667597118522")
 Location.create!(name: "Jardin Botanique", address: 'Parc Georges Nouelle, 7 avenue Mathias, 71100 Chalon-sur-Saône', latitude: '46.785848477639966', longitude: '4.8611451082312875')
-puts "add 3 locations : OK"
+Location.create!(name: "Jardin de l’Arquebuse", address: '4, rue Gauthey, 71100 Chalon-sur-Saône', latitude: '46.78443', longitude: '4.85152')
+Location.create!(name: "Impasse de l'ancienne prison", address: 'Impasse de l’ancienne prison, 71100 Chalon-sur-Saône', latitude: '46.78081', longitude: '4.85569')
+
+puts "add 5 locations : OK"
