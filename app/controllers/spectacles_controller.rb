@@ -4,7 +4,7 @@ class SpectaclesController < ApplicationController
 
   def index
     @spectacles = Spectacle.all
-    @spectacle = @spectacles.last
+    #@spectacle = @spectacles.last
   end
 
   def new
@@ -43,7 +43,19 @@ class SpectaclesController < ApplicationController
   end
 
   def spectacle_params
-    params.require(:spectacle).permit(:title, :company, :description, :director, :duration, :distribution, :production, :coproduction, :origin, :public)
+    params.require(:spectacle).permit(
+      :title,
+      :company,
+      :description,
+      :director,
+      :duration,
+      :distribution,
+      :production,
+      :coproduction,
+      :origin,
+      :public
+    )
+
   end
 
 end

@@ -1,7 +1,8 @@
   <%= simple_form_for [@spectacle, @perform] do |f| %>
     <%= f.input :date, placeholder: 'date' %>
     <%= f.input :cost, placeholder: 'cost' %>
+    <%= @locations.ids %>
+    <%#= f.association :location, include_blank: false %>
     <%#= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
-
     <%= f.submit 'Save', class: 'bt' %>
   <% end %>

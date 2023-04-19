@@ -8,6 +8,9 @@ class PerformsController < ApplicationController
   def new
     @spectacle = Spectacle.find(params[:spectacle_id])
     @perform = Perform.new
+    @locations = Location.all
+    @location = Location.new
+
   end
 
   def create
@@ -26,6 +29,16 @@ class PerformsController < ApplicationController
     end
   end
 
+  def edit
+    @perform = Perform.find(params[:id])
+  end
+
+  def update
+    @perform = Perform.find(params[:id])
+    @perform.update(params[:perform])
+    redirect_to perform_path(@perform)
+  end
+
   def show
   end
 
@@ -38,6 +51,6 @@ class PerformsController < ApplicationController
 
 
   def perform_params
-    params.require(:perform).permit(:date, :cost, :spectacle_id)
+    params.require(:perform).permit(:date, :cost, :spectacle_id, :location_id)
   end
 end
