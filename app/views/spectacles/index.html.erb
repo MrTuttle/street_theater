@@ -1,7 +1,8 @@
 <h1>Spectacles#:index</h1>
 <p>Find me in app/views/spectacles/:index.html.erb</p>
   <p><%= link_to "new spectacle", new_spectacle_path %> |
-  <%= link_to "see performs", performs_path %>
+  <%= link_to "see performs", performs_path %> |
+  <%= link_to "see locations", locations_path %>
   </p>
   <div class="cards_container">
     <% @spectacles.each do | spectacle | %>
