@@ -40,6 +40,7 @@ class PerformsController < ApplicationController
   end
 
   def show
+    @perform = Perform.find(params[:id])
   end
 
   private

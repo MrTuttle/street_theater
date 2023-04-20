@@ -3,19 +3,19 @@
 <p><%= link_to "new spectacle", new_spectacle_path %> |
   <%= link_to "see spectacles", spectacles_path %>
 </p>
-<div class="cards_container">
+<div class="cards_container no_link" style="border: red, solid, 1px">
   <% @performs.each do | perform | %>
-  <div class="card p-4 mt-2 mb-2">
-    <p class="mb-0"><strong>date </strong><%= perform.date %></p>
-    <p><strong>Company </strong><%= perform.spectacle.company %></p>
-    <h2><%= perform.spectacle.title %></h2>
-    <p><%= perform.spectacle.description %></p>
-    <div>
-      <p class="mb-0"><strong>Perform id </strong><%= perform.id %></p>
-      <p class="mb-0"><strong>cost </strong><%= perform.cost %> €</p>
-      <p><strong>spectacle_id </strong><%= perform.spectacle_id %></p>
-      <%= link_to "Detail", perform %>
-    </div>
-  </div>
+
+    <%= link_to perform do %>
+
+      <div class="card p-4 mt-2 mb-2" style="border: red, solid, 1px">
+        <p class="mb-0"><strong>date </strong><%= perform.date %></p>
+        <p><strong>Company </strong><%= perform.spectacle.company %></p>
+        <h2><%= perform.spectacle.title %></h2>
+
+      </div>
+
+    <% end %>
+
   <% end %>
 </div>
