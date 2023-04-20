@@ -1,6 +1,5 @@
 <h1>Perform#Show</h1>
-<%= link_to "see performs", performs_path, class:"btn btn-flat" %>
-<%= link_to "retours", spectacles_path, class:"btn btn-flat" %>
+<%= link_to "back to performs", performs_path, class:"btn btn-flat" %>
 
      <div class="card p-4 mt-2 mb-2" style="border: red, solid, 1px">
         <p class="mb-0"><strong>date </strong><%= @perform.date %></p>
@@ -11,7 +10,13 @@
         <div>
           <p class="mb-0"><strong>Perform id </strong><%= @perform.id %></p>
           <p class="mb-0"><strong>cost </strong><%= @perform.cost %> €</p>
-          <p><strong>spectacle_id </strong><%= @perform.spectacle_id %></p>
+          <p class="mb-0"><strong>spectacle_id </strong><%= @perform.spectacle_id %></p>
+          <p class="mb-0"><strong>location_id </strong><%= @perform.location_id %></p>
+          <p class="mb-0"><strong>@spectacle </strong><%= @spectacle %></p>
+          <p class="mb-0"><strong>@location </strong><%= @location %></p>
+
+
+
         </div>
                 <%= link_to "Edit", edit_perform_path(@perform) %>
 

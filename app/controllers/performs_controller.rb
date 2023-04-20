@@ -23,7 +23,8 @@ class PerformsController < ApplicationController
     # save the perform
 
     if @perform.save # true: redirect to spectacle show
-      redirect_to spectacle_path(@spectacle)
+      #redirect_to spectacle_path(@spectacle)
+      redirect_to :back
     else # false: render the form again with the errors ( model perform validates interprétés par simple_form)
       render :new, status: :unprocessable_entity
     end
@@ -31,16 +32,32 @@ class PerformsController < ApplicationController
 
   def edit
     @perform = Perform.find(params[:id])
+    @perform.location_id = @location
+
+    #try to connect list of locations
+    @locations = Location.all.ids #give me the list of ids
+
+    #????.map { |location| [location.name, location.id] }
+    #@location = Location.find(params[:location_id])
+    #@location = Location.find(params[:location_id]).name
+    #@location = Location.find(:location_id).name
+
+
   end
 
   def update
     @perform = Perform.find(params[:id])
-    @perform.update(params[:perform])
+    #@perform.update(params[:perform])
+    @perform.update(perform_params)
+
     redirect_to perform_path(@perform)
   end
 
   def show
     @perform = Perform.find(params[:id])
+    @location = Location.find(@perform.location_id).name
+    @spectacle = Spectacle.find(@perform.spectacle_id).title
+
   end
 
   private
@@ -52,6 +69,6 @@ class PerformsController < ApplicationController
 
 
   def perform_params
-    params.require(:perform).permit(:date, :cost, :spectacle_id, :location_id)
+    params.require(:perform).permit(:id, :date, :cost, :spectacle_id, :location_id)
   end
 end

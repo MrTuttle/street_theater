@@ -1,9 +1,24 @@
   <%= simple_form_for [@spectacle, @perform] do |f| %>
     <%= f.input :date, placeholder: 'date' %>
     <%= f.input :cost, placeholder: 'cost' %>
-    <p><strong>@locations.ids </strong><%#= @locations.ids %></p>
+    <%#= f.input :spectacle_id, as: :select %>
+    <%= f.input :location_id, collection: @locations  %>
+
+
+    <p>PUT</p>
+    <p><strong>@perform.spectacle_id </strong><%= @perform.spectacle_id %></p>
+    <p><strong>@locations </strong><%= @locations %></p>
+    <p><strong>Location.last.name </strong><%= Location.last.name %></p>
+    <p><strong>Location.find(1).name </strong><%= Location.find(1).name %></p>
+    <p><strong>Location.find(@locations).name </strong><%= Location.find(1).name %></p>
+    <p><strong>@location </strong><%= @location %></p>
+    <p><strong>@location </strong><%= @perform.location_id %></p>
+
     <%#= f.input :locations %>
+    <%#= f.association :location_id, %>
+
     <%#= f.association @locations.ids, include_blank: false %>
     <%#= f.input :spectacle_id, placeholder: "#{@spectacle.title}" %>
     <%= f.submit 'Save', class: 'bt' %>
+
   <% end %>
