@@ -1,7 +1,12 @@
 class LocationsController < ApplicationController
   def index
     @locations = Location.all
-    puts params.inspect
+    @markers = @flats.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def new
