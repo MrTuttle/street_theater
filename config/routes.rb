@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :performs, only: [:new, :create]
   end
   resources :performs, only: [:index, :show, :edit, :update, :destroy]
-
+  resources :locations, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
   # get 'spectacles', to: 'spectacles#index'
   # get 'spectacles/new', to: 'spectacle#new', as: :new_spectacle
