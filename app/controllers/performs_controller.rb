@@ -22,9 +22,9 @@ class PerformsController < ApplicationController
     @perform.spectacle = @spectacle
     # save the perform
 
-    if @perform.save # true: redirect to spectacle show
+    if @perform.save # true: redirect to perform show
       #redirect_to spectacle_path(@spectacle)
-      redirect_to :back
+      redirect_to performs_path
     else # false: render the form again with the errors ( model perform validates interprétés par simple_form)
       render :new, status: :unprocessable_entity
     end
@@ -55,14 +55,20 @@ class PerformsController < ApplicationController
 
   def show
     @perform = Perform.find(params[:id])
-    @location = Location.find(@perform.location_id).name
-    @spectacle = Spectacle.find(@perform.spectacle_id).title
+    @location_name = Location.find(@perform.location_id).name
+    @spectacle_title = Spectacle.find(@perform.spectacle_id).title
 
+  end
+
+  def destroy
+    @perform = Perform.find(params[:id])
+    @perform.destroy
+    redirect_to performs_path, status: :see_other
   end
 
   private
   def set_spectacle
-    #@spectacle = Spectacle.find(params[:spectacle_id])
+   # @spectacle = Spectacle.find(params[:spectacle_id])
     #@perform.spectacle = @spectacle
   end
 
