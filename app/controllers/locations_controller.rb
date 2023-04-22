@@ -1,10 +1,13 @@
 class LocationsController < ApplicationController
   def index
-    @locations = Location.all
-    @markers = @locations.geocoded.map do |location|
+    # @locations = Location.all
+    @locations = Location.geocoded
+    @markers = @locations.map do |location|
       {
         lat: location.latitude,
-        lng: location.longitude
+        lng: location.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {location: location}),
+        marker_html: render_to_string(partial: "marker", locals: {location: location}) # pass the location to the partial
       }
     end
   end
