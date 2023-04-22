@@ -1,5 +1,7 @@
   <%= simple_form_for [@spectacle, @perform] do |f| %>
-    <%= f.input :date, placeholder: 'date' %>
+    <%= f.input :date, as: :time, order: [:day, :month, :year, :hour] %>
+
+
     <%= f.input :cost, placeholder: 'cost' %>
     <%#= f.input :spectacle_id, as: :select %>
 

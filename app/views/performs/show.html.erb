@@ -2,7 +2,7 @@
 <%= link_to "back to performs", performs_path, class:"btn btn-flat" %>
 
      <div class="card p-4 mt-2 mb-2" style="border: red, solid, 1px">
-        <p class="mb-0"><strong>date </strong><%= @perform.date %></p>
+        <p class="mb-0"><strong>date </strong><%= @perform.date.strftime("%a %d %^b %k:%M") %></p>
         <p><strong>Company </strong><%= @perform.spectacle.company %></p>
         <h2><%= @perform.spectacle.title %></h2>
         <p><%= @perform.spectacle.description %></p>

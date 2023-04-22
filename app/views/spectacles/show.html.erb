@@ -12,6 +12,8 @@
         <p><%= perform.date.strftime("%A") %></p>
         <h1><%= perform.date.strftime("%d") %></h1>
         <p><%= perform.date.strftime("%^b") %></p>
+        <p><%= perform.date.strftime("%k:%M") %></p>
+
         <p><strong>Cost </strong><%= perform.cost %> €</p>
       </div>
     <% end %>

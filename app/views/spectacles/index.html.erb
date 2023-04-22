@@ -16,6 +16,7 @@
       <p>
         <% spectacle.performs.each do | day | %>
          | <strong><%= day.date.strftime("%a %d") %></strong> <%= day.date.strftime("%^b") %>
+          <%= day.date.strftime("%k:%M") %>
       <% end %>
       </p>
 
